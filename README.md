@@ -158,18 +158,6 @@ The repository includes two simulation entry points:
 - calculator verification: [Exercise2/calc_tb.v](Exercise2/calc_tb.v)
 - processor integration verification: [Exercise5/top_proc_tb.v](Exercise5/top_proc_tb.v)
 
-Typical flow (with Icarus Verilog + GTKWave):
-
-```bash
-# Example: calculator testbench
-iverilog -o calc_sim Exercise2/calc_tb.v Exercise2/calc.v Exercise2/calc_enc.v Exercise1/alu.v
-vvp calc_sim
-
-# Example: top processor testbench
-iverilog -o top_sim Exercise5/top_proc_tb.v Exercise5/top_proc.v Exercise4/datapath.v Exercise3/regfile.v Exercise1/alu.v Exercise5/rom.v Exercise5/ram.v
-vvp top_sim
-```
-
 The testbenches generate VCD waveforms (`calc.vcd`, `top_proc_tb.vcd`) that can be viewed in GTKWave.
 
 ---
